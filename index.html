@@ -1,0 +1,27 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="page">
+            <h1>Generate a</h1>
+            <h1 class="col">random password</h1>
+            <p class="never">Never use an insecure password again.</p>
+            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange"></div>
+            <p class="never" id="demo">Length of password: </p>
+            <div class="genBtn" onclick="gen()">
+                <img src="https://i.postimg.cc/mrmQ4TXz/Icon.png" alt="ico">
+                <p class="never">Generate passwords</p>
+            </div>
+            <div id="Pass">
+                
+                <div id="pass2" onclick="copy2()"><p id="copyp2">-</p><span id="hello2"><img src="https://i.ibb.co/KhPKNq0/ok-512.png" id="copied2" alt="">Copied</span><span class="tooltip" id="tooltip1">Click to copy</span></div>
+                <div id="pass3" onclick="copy3()"><p id="copyp3">-</p><span id="hello3"><img src="https://i.ibb.co/KhPKNq0/ok-512.png" id="copied3" alt="">Copied</span><span class="tooltip" id="tooltip2">Click to copy</span></div>
+                <div id="pass4" onclick="copy4()"><p id="copyp4">-</p><span id="hello4"><img src="https://i.ibb.co/KhPKNq0/ok-512.png" id="copied4" alt="">Copied</span><span class="tooltip" id="tooltip3">Click to copy</span></div>
+                <div id="pass1" onclick="copy1()"><p id="copyp1">-</p><span id="hello1"><img src="https://i.ibb.co/KhPKNq0/ok-512.png" id="copied1" alt="">Copied</span><span class="tooltip" id="tooltip4">Click to copy</span></div>
+            </div>
+        </div> 
+        
+        <script src="index.js"></script>
+    </body>
+</html>
