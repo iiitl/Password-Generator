@@ -9,9 +9,10 @@ var flaggen=0;
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 var input  = document.getElementById("input");//taking the value of input
-console.log(input.value);
+var theme  = document.getElementById("theme")
 
 output.textContent += slider.value; // Display the default slider value
+
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
@@ -21,6 +22,16 @@ slider.oninput = function() {
 input.oninput = function() {
     output.textContent = "Length of password: "+ this.value;
     slider.value = this.value; // putting input value in slider value
+}
+theme.onclick = function(){
+    document.getElementById("page").style.backgroundColor="red";
+    document.getElementById("new").style.color="black";
+    document.getElementById("new1").style.color="black";
+}  
+theme.ondblclick = function(){
+    document.getElementById("page").style.backgroundColor="#202838";
+    document.getElementById("new").style.color="white";
+    document.getElementById("new1").style.color="white";
 }
 let size=slider.value;
 function getRandom(){
@@ -70,6 +81,7 @@ function copy1(){
         document.getElementById("copied1").style.width="0.95em"
         document.getElementById("copyp1").textContent=""   
         document.getElementById("hello1").style.fontSize="1em" 
+        
     }
 }
 function copy2(){

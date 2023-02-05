@@ -3,9 +3,9 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="page">
-            <h1>Generate a</h1>
-            <h1 class="col">random password</h1>
+        <div class="page" id="page">
+            <h1 id="new">Generate a</h1>
+            <h1 class="col" id="new1">random password</h1>
             <p class="never">Never use an insecure password again.</p>
             <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange"></div>
             <div class="input"><input class="input" type="number" min="4" value="8" max="12" id="input" placeholder="Enter value here "></div>
@@ -21,7 +21,9 @@
                 <div id="pass4" onclick="copy4()"><p id="copyp4">-</p><span id="hello4"><img src="ok-512.png" id="copied4" alt="">Copied</span><span class="tooltip" id="tooltip3">Click to copy</span></div>
                 <div id="pass1" onclick="copy1()"><p id="copyp1">-</p><span id="hello1"><img src="ok-512.png" id="copied1" alt="">Copied</span><span class="tooltip" id="tooltip4">Click to copy</span></div>
             </div>
+            <button class="button" id="theme">THEME</button>
         </div> 
+       
         
         <script src="index.js"></script>
     </body>
