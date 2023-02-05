@@ -7,8 +7,8 @@
             <h1>Generate a</h1>
             <h1 class="col">random password</h1>
             <p class="never">Never use an insecure password again.</p>
-            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange" oninput="amount.value=myRange.value" >
-                <input id="amount" type="text" value="8" min="4" max="12" oninput="myRange.value=amount.value" />
+            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange" oninput="amount.value=myRange.value" onchange="cha()"  >
+                <input id="amount" type="text" value="8" min="4" max="12" oninput="myRange.value=amount.value"  />
             </div>
             <p class="never" id="demo">Length of password: </p>
             <div class="genBtn" onclick="gen()">

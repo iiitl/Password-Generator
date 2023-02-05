@@ -14,6 +14,11 @@ var text=document.getElementById("amount")
 slider.oninput = function() {
   output.textContent = "Length of password: "+ slider.value;
 }
+function cha(){
+    console.log("hey");
+    text.value=slider.value;
+    
+}
 let size=slider.value;
 function getRandom(){
     return Math.floor(Math.random()*arr.length)
