@@ -131,10 +131,15 @@ body{
     align-self: center;
     justify-self: center;
     /* height: 10px; */
+
+    /* transition: 0.2s ease; */
 }
 #hello1, #hello2, #hello3, #hello4{
     font-size: 0px;
+    /* transition: 0.2s ease; */
+
 }
+
 h1{
     color: white;
     margin-bottom: 0px;

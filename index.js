@@ -55,13 +55,25 @@ function gen(){
     document.getElementById("hello3").style.fontSize="0px"
     document.getElementById("hello4").style.fontSize="0px"
 }
+
+const COPY_TIMEOUT = 1000;
+
 function copy1(){
     if(flaggen===1){
         navigator.clipboard.writeText(pass1);
         // document.getElementById("tooltip1").style.visibility="hidden"
-        document.getElementById("copied1").style.width="0.95em"
-        document.getElementById("copyp1").textContent=""   
-        document.getElementById("hello1").style.fontSize="1em" 
+        
+          document.getElementById("copied1").style.width="0.95em"
+          document.getElementById("copyp1").textContent=""   
+          document.getElementById("hello1").style.fontSize="1em" 
+        
+        setTimeout(() => {
+          document.getElementById("copied1").style.width="0"
+          document.getElementById("copied1").textContent=String(pass1);
+          document.getElementById("copyp1").textContent=String(pass1); 
+          document.getElementById("hello1").style.fontSize="0" 
+          
+        }, COPY_TIMEOUT);
     }
 }
 function copy2(){
@@ -70,7 +82,15 @@ function copy2(){
         document.getElementById("copied2").style.width="0.95em"
         document.getElementById("copyp2").textContent=""   
         document.getElementById("hello2").style.fontSize="1em"   
-        // document.getElementById("tooltip2").style.visibility="hidden"     
+        // document.getElementById("tooltip2").style.visibility="hidden" 
+        
+        setTimeout(() => {
+          document.getElementById("copied2").style.width="0"
+          document.getElementById("copied2").textContent=String(pass2);
+          document.getElementById("copyp2").textContent=String(pass2); 
+          document.getElementById("hello2").style.fontSize="0" 
+          
+        }, COPY_TIMEOUT);
     }
 }
 function copy3(){
@@ -80,6 +100,15 @@ function copy3(){
         document.getElementById("copyp3").textContent=""   
         document.getElementById("hello3").style.fontSize="1em"
         // document.getElementById("tooltip3").style.visibility="hidden"
+
+        setTimeout(() => {
+          document.getElementById("copied3").style.width="0"
+          document.getElementById("copied3").textContent=String(pass3);
+          console.log(String(pass3));
+          document.getElementById("copyp3").textContent=String(pass3); 
+          document.getElementById("hello3").style.fontSize="0" 
+          
+        }, COPY_TIMEOUT);
     }
 }
 function copy4(){
@@ -89,6 +118,14 @@ function copy4(){
         document.getElementById("copyp4").textContent=""   
         document.getElementById("hello4").style.fontSize="1em"   
         // document.getElementById("tooltip4").style.visibility="hidden"     
+
+        setTimeout(() => {
+          document.getElementById("copied4").style.width="0"
+          document.getElementById("copied4").textContent=String(pass4);
+          document.getElementById("copyp4").textContent=String(pass4); 
+          document.getElementById("hello4").style.fontSize="0" 
+          
+        }, COPY_TIMEOUT);
     }
 }
 
