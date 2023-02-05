@@ -13,11 +13,13 @@ body{
 }
 .slide{
     width: 100%;
+    display: flex;
+
 }
 #myRange{
     /* -webkit-appearance: none; */
     appearance: none;
-    width: 100%;
+    width: 90%;
     height: 15px;
     background-color:#151b25;
     border-radius: 5%;
@@ -25,10 +27,20 @@ body{
     opacity: 0.7;
     transition: opacity 0.2s;
     margin-bottom: 0px;
+    display: inline-block;
 
 }
 #myRange:hover{
     opacity: 1;
+
+    
+}
+#amount{
+    width: 20%;
+    margin-left: 15px;
+    height: 17px;
+    background-color:#151b25;
+    color: #10b982;
 }
 #myRange::-webkit-slider-thumb{
     appearance: none;

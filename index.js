@@ -9,10 +9,10 @@ var flaggen=0;
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.textContent += slider.value; // Display the default slider value
-
+var text=document.getElementById("amount")
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
-  output.textContent = "Length of password: "+ this.value;
+  output.textContent = "Length of password: "+ slider.value;
 }
 let size=slider.value;
 function getRandom(){
