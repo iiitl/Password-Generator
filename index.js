@@ -62,6 +62,10 @@ function copy1(){
         document.getElementById("copied1").style.width="0.95em"
         document.getElementById("copyp1").textContent=""   
         document.getElementById("hello1").style.fontSize="1em" 
+        setTimeout(function(){
+            document.getElementById("copied1").style.width="0em";
+            document.getElementById("hello1").style.fontSize="0px";
+        }, 4000);
     }
 }
 function copy2(){
@@ -70,7 +74,11 @@ function copy2(){
         document.getElementById("copied2").style.width="0.95em"
         document.getElementById("copyp2").textContent=""   
         document.getElementById("hello2").style.fontSize="1em"   
-        // document.getElementById("tooltip2").style.visibility="hidden"     
+        // document.getElementById("tooltip2").style.visibility="hidden"  
+        setTimeout(function(){
+            document.getElementById("copied2").style.width="0em";
+            document.getElementById("hello2").style.fontSize="0px";
+        }, 4000);   
     }
 }
 function copy3(){
@@ -80,6 +88,10 @@ function copy3(){
         document.getElementById("copyp3").textContent=""   
         document.getElementById("hello3").style.fontSize="1em"
         // document.getElementById("tooltip3").style.visibility="hidden"
+        setTimeout(function(){
+            document.getElementById("copied3").style.width="0em";
+            document.getElementById("hello3").style.fontSize="0px";
+        }, 4000);
     }
 }
 function copy4(){
@@ -89,6 +101,10 @@ function copy4(){
         document.getElementById("copyp4").textContent=""   
         document.getElementById("hello4").style.fontSize="1em"   
         // document.getElementById("tooltip4").style.visibility="hidden"     
+        setTimeout(function(){
+            document.getElementById("copied4").style.width="0em";
+            document.getElementById("hello4").style.fontSize="0px";
+        }, 4000);
     }
 }
 
