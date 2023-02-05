@@ -30,6 +30,80 @@ function makePass(){
     }
     
 }
+
+
+
+// --------------------------------------------------------------------------------
+
+//! trying to make the hashing algorithm more intensive and complex
+
+//* this function returns a random number less than the parameter
+
+function getRandomNum(lessThanNum) {
+  let rNum = Math.floor((Math.random()*1000) % lessThanNum);
+  // console.log(rNum);
+  return rNum;
+}
+
+
+//* get any random index from array
+//* generating random number from a random value length-getRandomNum(10) to increase complexity
+let randomIndex = getRandomNum((length-getRandomNum(10)));
+
+
+
+function makeComplexPass(requiredPassLength) {
+
+
+  //* a random jump to make while looping through the `arr` array
+  
+  
+  let complexPass = [];
+  
+  /*
+  - ALGORITHM FUNCTIONING :-
+  > start with a random index, generate a random jump over the array, if the iterator goes beyond the array, again cycle it to the beginning
+  > perform the algorithm `size` number of times, i.e. the required pass length
+  */
+
+  let randomJump = getRandomNum(size);
+for(let i = randomIndex; ;i+=randomJump)
+{
+    //! keep updating the randomJump value for complexity
+    randomJump = getRandomNum(length);
+    if(i>=length) {
+      //* cycle back to the starting if iterator goes beyond the array
+      i = i-length-1;
+    }
+
+    //* select one character
+    complexPass.push(arr[i]);
+    if(requiredPassLength == complexPass.length) {
+      break;
+    }
+  }
+  return complexPass;
+}
+
+// console.log(makeComplexPass(5));
+
+
+// --------------------------------------------------------------------------------
+
+
+//! complex passwords
+let complexPass1 = makeComplexPass(size);
+let complexPass2 = makeComplexPass(size);
+let complexPass3 = makeComplexPass(size);
+let complexPass4 = makeComplexPass(size);
+
+// console.log(complexPass1);
+// console.log(complexPass2);
+// console.log(complexPass3);
+// console.log(complexPass4);
+
+
+
 var pass1
 var pass2
 var pass3
@@ -57,7 +131,7 @@ function gen(){
 }
 function copy1(){
     if(flaggen===1){
-        navigator.clipboard.writeText(pass1);
+        navigator.clipboard.writeText(complexPass1);
         // document.getElementById("tooltip1").style.visibility="hidden"
         document.getElementById("copied1").style.width="0.95em"
         document.getElementById("copyp1").textContent=""   
@@ -66,7 +140,7 @@ function copy1(){
 }
 function copy2(){
     if(flaggen===1){
-        navigator.clipboard.writeText(pass2)
+        navigator.clipboard.writeText(complexPass2)
         document.getElementById("copied2").style.width="0.95em"
         document.getElementById("copyp2").textContent=""   
         document.getElementById("hello2").style.fontSize="1em"   
@@ -75,7 +149,7 @@ function copy2(){
 }
 function copy3(){
     if(flaggen===1){
-        navigator.clipboard.writeText(pass3)
+        navigator.clipboard.writeText(complexPass3)
         document.getElementById("copied3").style.width="0.95em"
         document.getElementById("copyp3").textContent=""   
         document.getElementById("hello3").style.fontSize="1em"
@@ -84,7 +158,7 @@ function copy3(){
 }
 function copy4(){
     if(flaggen===1){
-        navigator.clipboard.writeText(pass4)
+        navigator.clipboard.writeText(complexPass4)
         document.getElementById("copied4").style.width="0.95em"
         document.getElementById("copyp4").textContent=""   
         document.getElementById("hello4").style.fontSize="1em"   
