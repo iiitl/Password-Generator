@@ -166,3 +166,9 @@ h1{
 
     }
 }
+
+
+.subheading {
+  display: flex;
+  justify-content: center;
+}

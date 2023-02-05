@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-container {
+  /* background-color: red; */
+  margin-bottom: 7%;
+  height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.input-container>input[type="number"] {
+  width: 30%;
+  height: 100%;
+
+  font-size: 20px;
+  background-color: #161c27;
+  border: 2px solid dimgray;
+  color: white;
+}
+
+.input-container>input[type="number"]:active {
+  border: 2px solid dimgray;
+  /* padding-left: 10px; */
+}
+
+
+/*
+
+> google fonts updated
+> input box put and styled
+
+*/

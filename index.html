@@ -1,14 +1,20 @@
 <html>
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="inputbox.css">
     </head>
     <body>
         <div class="page">
             <h1>Generate a</h1>
             <h1 class="col">random password</h1>
             <p class="never">Never use an insecure password again.</p>
-            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange"></div>
-            <p class="never" id="demo">Length of password: </p>
+            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange" onchange="updateInputBoxFromSlider()"></div>
+            <div class="subheading">
+              <p class="never" id="demo">Length of password: </p>
+            </div>
+            <div class="input-container">
+              <input type="number" onchange="updateInputBoxValue()" min="4" max="12" value="8">
+            </div>
             <div class="genBtn" onclick="gen()">
                 <img src="Icon.png" alt="ico">
                 <p class="never">Generate passwords</p>

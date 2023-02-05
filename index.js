@@ -13,8 +13,12 @@ output.textContent += slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.textContent = "Length of password: "+ this.value;
+  updateInputBoxFromSlider();
 }
+
 let size=slider.value;
+
+
 function getRandom(){
     return Math.floor(Math.random()*arr.length)
 }
@@ -95,9 +99,62 @@ function copy4(){
 // console.log(pass)
 
 
+// constants which determine the password lengths
+const MIN_SIZE = 4;
+const MAX_SIZE = 12;
+const DEFAULT_SIZE = 8;
+
+// initially update the slider value
+slider.value = DEFAULT_SIZE;
+
+// update the slider range constraints
+slider.min = MIN_SIZE;
+slider.max = MAX_SIZE;
+
+let inputBox = document.querySelector('.input-container>input');
+
+// if input box value changes, call this function
+function updateInputBoxValue() {
+
+  // extract numberical value from input box
+  let inputBoxValue = Number(inputBox.value);
+
+  // console.log(typeof inputBoxValue);
+  // console.log(inputBoxValue);
 
 
+  // check for password length range between 4 and 12 only
+  if(inputBoxValue > MAX_SIZE || inputBoxValue < MIN_SIZE) {
+    alert("Please enter a value in range 4 to 12");
+    changeInputBox(DEFAULT_SIZE);
+    return;
+  }
+  
+  // console.log(inputBoxValue);
+
+  // update the size
+  size = inputBoxValue;
+
+  // update the slider (slide it)
+  slider.value = size;
+
+  // update the text
+  output.textContent = "Length of password: "+ size;
+
+}
 
 
+// if slider value changes, call this function
+function updateInputBoxFromSlider() {
+  inputBox.value=slider.value;
+  size = slider.value;
+}
 
+// manually changing input box value
+function changeInputBox(num) {
+  size = num;
+  inputBox.value=num;
+  slider.value=num;
+  output.textContent = "Length of password: "+ size;
+}
 
