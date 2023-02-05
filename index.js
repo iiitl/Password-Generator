@@ -8,11 +8,19 @@ var flaggen=0;
 // console.log(length)
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
+var input  = document.getElementById("input");//taking the value of input
+console.log(input.value);
+
 output.textContent += slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.textContent = "Length of password: "+ this.value;
+  input.value = this.value; // putting slider value in input value
+}
+input.oninput = function() {
+    output.textContent = "Length of password: "+ this.value;
+    slider.value = this.value; // putting input value in slider value
 }
 let size=slider.value;
 function getRandom(){
