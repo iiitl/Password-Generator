@@ -13,6 +13,7 @@ body{
 }
 .slide{
     width: 100%;
+    margin-bottom:50px;
 }
 #myRange{
     /* -webkit-appearance: none; */
@@ -153,8 +154,9 @@ h1{
         font-size: 40px;
     }
     .page{
-        width: 100%;
-        height: 70%;
+        width: 100vw;
+        margin: 5%;
+        /* height: 70%; */
     }
     #Pass > div:hover .tooltip{
         visibility: hidden;
@@ -165,4 +167,10 @@ h1{
     height: 50px;
 
     }
+}
+#textbox{
+    background-color: white;
+    font-size: 20px;
+    display: inline;
+    margin-top: 10px;
 }

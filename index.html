@@ -7,7 +7,11 @@
             <h1>Generate a</h1>
             <h1 class="col">random password</h1>
             <p class="never">Never use an insecure password again.</p>
-            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange"></div>
+
+            <div class="slide"><input type="range" min="4" value="8" max="12" id="myRange" oninput="textbox.value=myRange.value" >
+                <input id="textbox" type="text" value="8" min="4" max="12" oninput="myRange.value=textbox.value" />
+            </div>
+
             <p class="never" id="demo">Length of password: </p>
             <div class="genBtn" onclick="gen()">
                 <img src="Icon.png" alt="ico">
