@@ -97,7 +97,21 @@ function copy4(){
 
 
 
+// ----------------------------
+
+//! adding the theme button functionality
+
+let darkBtn = document.querySelector('.button-box-1>*');
+let lightBtn = document.querySelector('.button-box-2>*');
+
+let rootElement = document.querySelector('html');
+
+darkBtn.addEventListener('click', (e) => {
+  rootElement.className = 'dark';
+});
 
 
-
+lightBtn.addEventListener('click', (e) => {
+  rootElement.className = 'light';
+});
 

@@ -1,25 +1,27 @@
 body{
-    background-color: #161c27;
+    background-color: var(--main-bg);
     color: #10b982;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .page{
-    background-color: #202838;
+    background-color: var(--panel-bg);
     border-radius: 1.05em;
     padding: 3.25em;
     box-shadow: 10px 10px 10px 10px #000000a6;
 }
 .slide{
     width: 100%;
+
+
 }
 #myRange{
     /* -webkit-appearance: none; */
     appearance: none;
     width: 100%;
     height: 15px;
-    background-color:#151b25;
+    background-color:var(--slider-bg);
     border-radius: 5%;
     outline:none;
     opacity: 0.7;
@@ -34,7 +36,7 @@ body{
     appearance: none;
     width: 25px;
     height: 25px;
-    background-color: #10b982;
+    background-color: var(--secondary-color);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -44,15 +46,47 @@ body{
     display: grid;
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(2,4.5em);
-    color: #10b98160;
+    color: var(--secondary-dark-color);
     /* top: -5em; */
     /* margin-bottom: 10%; */
     /* align-content: center; */
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+#Pass p {
+  color: var(--main-text-color) !important;
+}
+
+#Pass span {
+  color: var(--main-text-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Pass > div{
-    background-color: #263548;
+    background-color: var(--pswd-btn-bg);
     border-radius: 0.625em;
     position: relative;
     /* padding-bottom: 0.625em; */
@@ -63,11 +97,13 @@ body{
     font-size: 1.2em;
     display: inline-block;
     transition: background-color 0.3s;
+
+    border: 1.2px solid var(--pswd-btn-border);
 }
 .tooltip{
     /* visibility: hidden; */
     width: 120px;
-    background-color: white;
+    background-color: var(--tooltip-color);
     color: black;
     text-align: center;
     border-radius: 6px;
@@ -87,7 +123,7 @@ body{
     top: 100%;
     left: 50%;
     position: absolute;
-    border-color: white transparent transparent transparent;
+    border-color: var(--main-text-color) transparent transparent transparent;
 
 }
 #Pass > div:hover .tooltip{
@@ -95,13 +131,13 @@ body{
     opacity: 1;
 }
 #Pass > div:hover{
-    background-color: #222f41;
+    background-color: var(--on-panel-hover-color);
     cursor: pointer;
 }
 
 .genBtn{
     display: flex;
-    background-color:#10b982;
+    background-color:var(--main-btn-bg);
     border-radius: 0.625em;
     align-items: center;
     width: 19em;
@@ -112,7 +148,7 @@ body{
     transition: background-color 0.3s;
 }
 .genBtn:hover{
-    background-color: #0da371;
+    background-color: var(--main-btn-bg-hover);
     cursor: pointer;
 }
 .genBtn > img{
@@ -136,16 +172,16 @@ body{
     font-size: 0px;
 }
 h1{
-    color: white;
+    color: var(--main-text-color);
     margin-bottom: 0px;
     font-weight: bold;
 }
 .col{
     margin-top: 0px;
-    color: #10b982;
+    color: var(--secondary-color);
 }
 .never{
-    color: white;
+    color: var(--main-text-color);
     font-size: 1.6em;
 }
 @media only screen and (max-width: 1279px){
@@ -165,4 +201,155 @@ h1{
     height: 50px;
 
     }
+}
+
+
+.theme-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 5rem;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+  
+}
+
+.theme-container button {
+  font-size: 20px;
+  padding: 7px 25px;
+  border:none;
+}
+
+.theme-container .button-box-1>button {
+  background-color:var(--dark-theme-btn-bg);
+  color: var(--dark-theme-btn-color);
+  padding: 8px 27px;
+  border: 1.5px solid var(--dark-theme-btn-border);
+  transition: 0.3s ease;
+
+}
+
+.theme-container .button-box-1>button:hover {
+  border: 1.5px solid var(--dark-theme-btn-border);
+  background-color: var(--dark-theme-btn-bg-hover);
+  transition: 0.3s ease;
+}
+
+.theme-container .button-box-2 button {
+  background-color: var(--light-theme-btn-bg);
+  color: var(--light-theme-btn-color);
+  border:2px solid var(--light-theme-btn-border);
+  transition: 0.3s ease;
+  /* outline: var(--light-theme-btn-bg); */
+}
+
+.theme-container .button-box-2 button:hover {
+  background-color: var(--light-theme-btn-bg-hover);
+  color: var(--light-theme-btn-color);
+  border:2px solid var(--light-theme-btn-border);
+  /* outline: 1px solid var(--light-theme-btn-border);  */
+  transition: 0.3s ease;
+}
+
+
+/* ! code for dark and light themes */
+
+* {
+  transition: 0.2s ease;
+}
+
+:root {
+
+  /* --main-bg: rgba(16, 185, 129, 0.5);
+  --panel-bg: rgb(255, 255, 255);
+
+  --main-btn-bg: #10b982;
+  --main-btn-bg-hover: rgba(16, 185, 129, 0.7);
+
+  --slider-bg: #10b982;
+  --secondary-color: #10b982;
+
+  --on-panel-color: rgba(16, 185, 129, 0.7);
+  --on-panel-hover-color: rgba(16, 185, 129, 0.5);
+
+  --main-text-color: #202838;
+
+  --pswd-btn-border: var(--main-text-color);
+
+  --dark-theme-btn-border: white;
+  --dark-theme-btn-bg: rgb(56, 55, 71);
+  --dark-theme-btn-color: white;
+  --dark-theme-btn-bg-hover: var(--main-text-color);
+
+  --light-theme-btn-border: rgba(22, 20, 20, 1);
+  --light-theme-btn-bg: rgb(217, 225, 250);
+  --light-theme-btn-color: var(--main-text-color);
+  --light-theme-btn-bg-hover: white; */
+}
+
+
+
+:root.light {
+  --main-bg: rgba(16, 185, 129, 0.5);
+  --panel-bg: rgb(255, 255, 255);
+
+  --tooltip-color: rgb(16, 185, 129);
+
+  --main-btn-bg: #10b982;
+  --main-btn-bg-hover: rgba(16, 185, 129, 0.7);
+
+  --slider-bg: #10b982;
+  --secondary-color: #10b982;
+
+  --on-panel-color: rgba(16, 185, 129, 0.7);
+  --on-panel-hover-color: rgba(16, 185, 129, 0.5);
+
+  --main-text-color: #202838;
+
+  --pswd-btn-border: var(--main-text-color);
+
+  --pswd-btn-bg: rgb(212, 214, 214);
+
+  --dark-theme-btn-border: white;
+  --dark-theme-btn-bg: rgb(56, 55, 71);
+  --dark-theme-btn-color: white;
+  --dark-theme-btn-bg-hover: var(--main-text-color);
+
+  --light-theme-btn-border: rgba(22, 20, 20, 1);
+  --light-theme-btn-bg: rgb(217, 225, 250);
+  --light-theme-btn-color: var(--main-text-color);
+  --light-theme-btn-bg-hover: white;
+}
+
+:root.dark {
+  --main-bg: #161c27;
+  --panel-bg: #202838;
+
+  --tooltip-color: #263548;
+
+  --slider-bg: #151b25;
+  --secondary-color: #10b982;
+  --secondary-dark-color: #10b98160;
+
+  --on-panel-color: #263548;
+  --on-panel-hover-color: #222f41;
+
+  --pswd-btn-bg: #263548;
+
+  --main-btn-bg: #10b982;
+  --main-btn-bg-hover: #0da371;
+
+  --main-text-color: white;
+
+  --pswd-btn-border: rgba(0,0,0,0);
+
+
+  --dark-theme-btn-border: rgba(0,0,0,0);
+  --dark-theme-btn-bg: rgb(56, 55, 71);
+  --dark-theme-btn-color: white;
+  --dark-theme-btn-bg-hover: black;
+
+  --light-theme-btn-border: rgba(22, 20, 20, 1);
+  --light-theme-btn-bg: #4cd2a5;
+  --light-theme-btn-color: black;
+  --light-theme-btn-bg-hover: white;
 }
